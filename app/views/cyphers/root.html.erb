@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6">
+    <form action="/encrypt">
+      <div class="form-group">
+        <textarea name="text" class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <input type="hidden" name="start_time">
+      <div class="form-group">
+        <%= select_tag "shift_num", options_for_select((1..25).to_a) %>
+      </div>
+      <input type="submit" value="encrypt" class="btn btn-default">
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    <form action="/decrypt">
+      <div class="form-group">
+        <textarea name="text" class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <input type="hidden" name="start_time">
+      <input type="submit" value="decrypt" class="btn btn-default">
+    </form>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<%= link_to "HOME", root_path %>
+
+<div>Time: <%= @elapsed_time %>ms</div>
+<ul>
+  <% @resp.each do |r| %>
+    <li><%= r %></li>
+  <% end %>
+</ul>
